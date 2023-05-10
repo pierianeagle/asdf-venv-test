@@ -52,3 +52,14 @@ asdf reshim python
 # deactivate venv
 deactivate
 ```
+
+## Notes
+
+Notes
+```zsh
+# upgrade everything
+pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
+
+# downgrade a package
+pip install -I pendulum==2.1.0
+```
